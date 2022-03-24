@@ -12,4 +12,8 @@ public class Television {
 	int getChannel() {
 		return channel;
 	}
+	
+	void setChannel(int ch) {
+		channel = ch;
+	}
 }
