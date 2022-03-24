@@ -7,13 +7,15 @@ public class TelevisionTest {
 		myTv.channel = 7;
 		myTv.volume = 9;
 		myTv.onOff = true; // 객체의 멤버에 접근할 때는 클래스명과 필드명 사이에 멤버 연산자(.)를 사용함
-		myTv.print();
+		int ch = myTv.getChannel();
+		System.out.println("현재 채널은 " + ch + "입니다.");
+		/*myTv.print();
 		
 		Television yourTv = new Television();
 		yourTv.channel = 9;
 		yourTv.volume = 12;
 		yourTv.onOff = true;
-		yourTv.print();
+		yourTv.print();*/
 		
 	}
 
