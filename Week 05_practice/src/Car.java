@@ -1,17 +1,23 @@
 
 public class Car {
-	int speed;
+	private String model;
+	private String color;
+	private int speed;
 	
-	Car(){
-		System.out.println("속도는 " + speed);
+	// 자동차의 시리얼 번호
+	private int id;
+	// 실체화된 Car 객체의 개수를 위한 정적 변수
+	private static int numbers=0;
+	
+	public Car(String m, String c, int s) {
+		model = m;
+		color = c;
+		speed = s;
+		// 자동차의 개수를 증가하고 id에 대입한다.
+		id = ++numbers;
 	}
 	
-	{
-		speed = 100;
-	}
-	
-	public static void main(String args[]) {
-		Car c1 = new Car();
-		Car c2 = new Car();
+	public static int getNumberOfCars() {
+		return numbers;
 	}
 }
