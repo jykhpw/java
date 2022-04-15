@@ -13,4 +13,8 @@ public class Manager extends Employee{
 		System.out.println("salary="+salary);
 		// System.out.println("rrn="+rrn);
 	}
+	
+	public void printSalary() {
+		System.out.println(name+"("+address+"):"+(salary+bonus));
+	}
 }
