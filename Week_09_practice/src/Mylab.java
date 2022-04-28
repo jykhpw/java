@@ -18,7 +18,7 @@ public class Mylab {
 		panel.add(label2);
 		panel.add(field2);
 		panel.add(button);
-		f.setSize(300, 150);
+		f.setSize(280, 150);
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		f.setTitle("온도변환기");
 		f.setVisible(true);
