@@ -1,9 +1,10 @@
 
 class Counter {
+	// 동기화된 메소드(synchronized methods)
 	private int value = 0;
-	public void increment() { value++; }
-	public void decrement() { value--; }
-	public void printCounter() { System.out.println(value); }
+	public synchronized void increment() { value++; }
+	public synchronized void decrement() { value--; }
+	public synchronized void printCounter() { System.out.println(value); }
 }
 
 class MyThread1 extends Thread {
@@ -30,7 +31,7 @@ class MyThread1 extends Thread {
 public class CounterTest {
 
 	public static void main(String[] args) {
-		// 13 - p.22 스레드 간섭
+		// 13 - p.24 스레드 간섭 해결 - 동기화된 메소드
 		Counter c = new Counter();
 		new MyThread1(c).start();
 		new MyThread1(c).start();
